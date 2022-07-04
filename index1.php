@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'admin/dbconnect.php'
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -165,29 +165,106 @@ include 'admin/dbconnect.php'
 
 <!-- shop section starts  -->
 
-<section class="konten" id="menu">
-        <div class="container">
-            <h1>Menu Makanan</h1>
+<section class="shop" id="shop">
 
-            <div class="row">
+    <h1 class="heading"> our <span> products </span> </h1>
 
-                <?php $ambil = $koneksi->query("SELECT * FROM produk"); ?>
-                <?php while ($perproduk = $ambil->fetch_assoc()) { ?>
-                    <div class="col-md-3">
-                        <div class="thumbnail">
-                            <img src="foto_produk/<?php echo $perproduk['foto_produk'] ?>">
-                            <div class="caption">
-                                <h3><?php echo $perproduk['nama_produk'] ?> </h3>
-                                <p><?php echo $perproduk['des_produk'] ?> </p>
-                                <h5><?php echo "Rp. " . number_format($perproduk['harga_produk'], '0', ',', '.') ?></h5>
-                                <a href="detail.php?id=<?php echo $perproduk['id_produk']; ?>" class="btn btn-primary">Beli</a>
-                            </div>
-                        </div>
-                    </div>
-                <?php } ?>
+    <div class="box-container">
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="image/product_01.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>air-dried food</h3>
+                <div class="amount"> $15.00 - $30.00 </div>
             </div>
         </div>
-    </section>
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="image/product_02.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>air-dried food</h3>
+                <div class="amount"> $15.00 - $30.00 </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="image/product_03.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>air-dried food</h3>
+                <div class="amount"> $15.00 - $30.00 </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="image/product_04.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>air-dried food</h3>
+                <div class="amount"> $15.00 - $30.00 </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="image/product_05.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>air-dried food</h3>
+                <div class="amount"> $15.00 - $30.00 </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="image/product_06.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>air-dried food</h3>
+                <div class="amount"> $15.00 - $30.00 </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
 <!-- shop section ends -->
 
 
